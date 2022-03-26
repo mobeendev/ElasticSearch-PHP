@@ -1,0 +1,12 @@
+{
+    "name": "abdulmobeen/elasticapp",
+    "authors": [
+        {
+            "name": "mobeendev",
+            "email": "mobeendev@gmail.com"
+        }
+    ],
+    "require": {
+         "elasticsearch/elasticsearch": "^7.0"
+    }
+}
