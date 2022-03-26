@@ -12,7 +12,7 @@ echo '<h1>PHP Stack - Elasticsearch</h1>';
 $hosts = [
     [
         'host' => 'localhost',
-        'port' => '9201',
+        'port' => '9203',
         'scheme' => 'http',
     ],
     [
@@ -48,7 +48,7 @@ $params = [
 
 
 $params = [
-    'index' => 'hotels2',
+    'index' => 'hotels',
     'body'  => [
         'query' => [
             'match' => [
