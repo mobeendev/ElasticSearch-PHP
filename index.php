@@ -25,28 +25,8 @@ $client = ClientBuilder::create()
 
 echo "<pre>";
 
-$params = [
-    'index' => 'my_index',
-    'body' => [
-        'mappings' => [
-            '_source' => [
-                'enabled' => true
-            ],
-            'properties' => [
-                'first_name' => [
-                    'type' => 'keyword'
-                ],
-                'age' => [
-                    'type' => 'integer'
-                ]
-            ]
-        ]
-    ]
-];
 
-// $response = $client->indices()->create($params);
-
-
+// search hotel records
 $params = [
     'index' => 'hotels',
     'body'  => [
@@ -62,5 +42,22 @@ $params = [
 ];
 
 $results = $client->search($params);
-
 print_r($results);
+
+
+// search book records
+$params = [
+    'index' => 'books',
+    'body'  => [
+        'query' => [
+            'match' => [
+                'author' => 'Nolan Considine',
+            ],
+        ]
+    ]
+];
+
+$results = $client->search($params);
+print_r($results);
+
+

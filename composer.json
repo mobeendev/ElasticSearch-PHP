@@ -2,10 +2,11 @@
     "name": "abdulmobeen/elasticapp",
     "authors": [
         {
-            "name": "mobeendev",
+            "name": "mobeendev"
         }
     ],
     "require": {
-         "elasticsearch/elasticsearch": "^7.0"
+         "elasticsearch/elasticsearch": "^7.0",
+        "fzaninotto/faker": "^1.5"
     }
 }
